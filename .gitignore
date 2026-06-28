@@ -1,0 +1,31 @@
+# Build outputs
+*.o
+*.obj
+*.axf
+*.elf
+*.hex
+*.bin
+*.out
+*.lst
+*.map
+*.dep
+*.d
+
+# Keil MDK
+*.uvguix.*
+*.uvoptx
+*.Scr
+*.Administrator
+JLinkLog.txt
+*.iex
+
+# IDE
+.vs/
+.vscode/
+*.sln
+*.suo
+*.user
+
+# OS
+Thumbs.db
+Desktop.ini

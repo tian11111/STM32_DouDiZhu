@@ -29,3 +29,6 @@ JLinkLog.txt
 # OS
 Thumbs.db
 Desktop.ini
+
+# WorkBuddy
+.workbuddy/

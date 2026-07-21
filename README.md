@@ -17,24 +17,21 @@
 
 ### LCD（SPI1 + GPIO）
 
-| LCD 引脚 | STM32 引脚 | 功能 |
-|----------|-----------|------|
-| SCK | PA5 | SPI1 时钟 |
-| MOSI | PA7 | SPI1 主机输出 |
-| DC | PA4 | 数据 / 命令选择 |
-| RST | PA6 | LCD 复位 |
-| CS | PB0 | LCD 片选 |
-| BLK | PB1 | 背光控制 |
-
-### 触摸（SPI2 + GPIO）
-
-| 触摸引脚 | STM32 引脚 | 功能 |
-|----------|-----------|------|
-| T_CS | PB12 | 触摸片选 |
-| T_IRQ | PB13 | 触摸中断（EXTI15_10） |
-| SCK | PB13 | SPI2 时钟 |
-| MOSI | PB15 | SPI2 主机输出 |
-| MISO | PB14 | SPI2 主机输入 |
+屏幕引脚	STM32 引脚	信号
+1. T_IRQ	PB13	触摸中断
+2. T_DO	PB14	触摸 MISO
+3. T_DIN	PB15	触摸 MOSI
+4. T_CS	PB12	触摸片选
+5. T_CLK	PB10	触摸 SPI 时钟
+6. SDO	悬空	不接
+7. LED	PB1	背光
+8. SCK	PA5	LCD SPI 时钟
+9. SDI	PA7	LCD 数据
+10. DC	PA4	数据/命令
+11. RESET	PA6	复位
+12. CS	PB0	LCD 片选
+13. GND	GND	地
+14. VCC	3.3V	电源
 
 ### 调试串口
 

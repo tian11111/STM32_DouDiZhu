@@ -17,21 +17,22 @@
 
 ### LCD（SPI1 + GPIO）
 
-屏幕引脚	STM32 引脚	信号
-1. T_IRQ	PB13	触摸中断
-2. T_DO	PB14	触摸 MISO
-3. T_DIN	PB15	触摸 MOSI
-4. T_CS	PB12	触摸片选
-5. T_CLK	PB10	触摸 SPI 时钟
-6. SDO	悬空	不接
-7. LED	PB1	背光
-8. SCK	PA5	LCD SPI 时钟
-9. SDI	PA7	LCD 数据
-10. DC	PA4	数据/命令
-11. RESET	PA6	复位
-12. CS	PB0	LCD 片选
-13. GND	GND	地
-14. VCC	3.3V	电源
+| # | 屏幕针脚 | STM32 引脚 | LQFP64 脚位 | 说明 |
+|---|---------|-----------|------------|------|
+| 1 | T_IRQ | **PB13** | 34 | CTP_INT，EXTI13 下降沿中断 |
+| 2 | T_DO  | **PB14** | 35 | SPI2_MISO（触摸数据回读） |
+| 3 | T_DIN | **PB15** | 36 | SPI2_MOSI（命令发给触摸） |
+| 4 | T_CS  | **PB12** | 33 | 触摸片选 |
+| 5 | T_CLK | **PB10** | 29 | SPI2_SCK |
+| 6 | SDO   | **不接** | — | LCD 的 MISO，SPI1 是 TX-only，且 PA6 已被 RST 占用 |
+| 7 | LED   | **PB1**  | 27 | ST_BLK，背光控制（高电平亮） |
+| 8 | SCK   | **PA5**  | 21 | SPI1_SCK |
+| 9 | SDI   | **PA7**  | 23 | SPI1_MOSI |
+| 10 | DC    | **PA4** | 20 | ST_DC，数据/命令选择 |
+| 11 | RESET | **PA6** | 22 | ST_RST，LCD 复位 |
+| 12 | CS    | **PB0** | 26 | ST_CS，LCD 片选 |
+| 13 | GND   | **GND** | — | 共地 |
+| 14 | VCC   | **3V3** | — | 3.3V |
 
 ### 调试串口
 

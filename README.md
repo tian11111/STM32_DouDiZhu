@@ -1,6 +1,8 @@
 # STM32 斗地主
 
 基于 LVGL v9 的 STM32F407 单机斗地主游戏，支持触摸操作、AI 对战、记分。移植自 LVGL PC 模拟器版斗地主。
+<img src="IMG20260721164242.jpg" width="400">
+<img src="IMG20260721164254.jpg" width="400">
 
 ## 硬件
 
